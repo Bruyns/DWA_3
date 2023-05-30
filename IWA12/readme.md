@@ -116,10 +116,16 @@ checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
 ```
 
 ### Current preview of website
-![image](live_server_preview.png)
+![image](./images/live_server_preview.png)
 
 
 ### external resources to be used
 * [styles and classes](https://javascript.info/styles-and-classes)
 * [HTMLElements.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
 
+### how to run and edit this code
+* use vs studio to open up the code
+  ![image](./images/vs%20studio%20preview.png)
+
+* open live server in vs code to open in the browser of your choice(prederably chrome for better experience)
+  ![image](./images/live%20server%20example.png)

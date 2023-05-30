@@ -3,10 +3,14 @@
 /**
  * this is the object that checks book availability
  * @typedef {Object} STATUS_MAP 
- * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} shelf - if the book is physically in the library on a shelf
- * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} reserved - if the book is reserved for checkout by a user
- * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} overdue - if the book is out past its due date
- * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} checkedOut - checks is a book can be checked out
+ * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} shelf 
+ * - if the book is physically in the library on a shelf
+ * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} reserved 
+ * - if the book is reserved for checkout by a user
+ * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} overdue 
+ * - if the book is out past its due date
+ * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} checkedOut 
+ * - checks is a book can be checked out
  */
 
 /**
