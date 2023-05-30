@@ -1,3 +1,17 @@
+//@ts-check
+
+/**
+ * this is the object that checks book availability
+ * @typedef {Object} STATUS_MAP 
+ * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} shelf - if the book is physically in the library on a shelf
+ * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} reserved - if the book is reserved for checkout by a user
+ * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} overdue - if the book is out past its due date
+ * @property {{color: string , canReserve: boolean , canCheckout: boolean , canCheckIn: boolean}} checkedOut - checks is a book can be checked out
+ */
+
+/**
+ * @type {STATUS_MAP}
+ */
 const STATUS_MAP = {
     shelf: {
         color: 'green',
@@ -25,41 +39,57 @@ const STATUS_MAP = {
     }
 }
 
-// Edit below line 
-const book1 = {
-status : document.getElementById("#book1"),
-reserve : document.querySelector(".reserve"),
-checkout : document.querySelector(".checkout"),
-checkin : document.querySelector(".checkin"),
-}
+// Edit below line
+/**
+ * @type {HTMLElement | null} book1 to be appended to the DOM  
+ */
+const book1 = document.getElementById('book1');
 
-const book2 = {
-    status : document.getElementById("#book2"),
-    reserve : document.querySelector(".reserve"),
-    checkout : document.querySelector(".checkout"),
-    checkin : document.querySelector(".checkin"),
-    }
+/**
+ * @type {Element | null} book1Status checks the status class inside the HTML for book 1
+ */
+const book1Status = book1.querySelector('.status');
 
-const book3 = {
-    status : document.getElementById("#book3"),
-    reserve : document.querySelector(".reserve"),
-    checkout : document.querySelector(".checkout"),
-    checkin : document.querySelector(".checkin"),
-}
+/**
+ * @type {Element | null} book1Reserve checks the reserve class inside the HTML for book 1
+ */
+const book1Reserve = book1.querySelector('.reserve');
+
+/**
+ * @type {Element | null} book1Checkout checks the checkout class inside the HTML for book 1 
+ */
+const book1Checkout = book1.querySelector('.checkout');
+
+/**
+ * @type {Element | null} book1Checkin book1 to be appended to the DOM 
+ */
+const book1Checkin = book1.querySelector('.checkin');
 
 
-book1.status.style = STATUS_MAP[shelf.color] ,
-book1.reserve = (STATUS_MAP.status.canReserve) ? 'enabled' : 'disabled'
-book1.checkout = (STATUS_MAP.status.canCheckout) ? 'enabled' : 'disabled'
-book1.checkin = (STATUS_MAP.status.canCheckIn) ? 'enabled' : 'disabled'
-    
 
-book2.status = STATUS_MAP.status.color,
-book2.reserve = (STATUS_MAP.status.canReserve) ? 'enabled' : 'disabled'
-book2.checkout = (STATUS_MAP.status.canCheckout) ? 'enabled' : 'disabled'
-book2.checkin = (STATUS_MAP.status.canCheckIn) ? 'enabled' : 'disabled'
+const book2 = document.getElementById('book2');
+const book2Status = book2.querySelector('.status');
+const book2Reserve = book2.querySelector('.reserve');
+const book2Checkout = book2.querySelector('.checkout');
+const book2Checkin = book2.querySelector('.checkin');
 
-book3.status = STATUS_MAP.status.color,
-book3.reserve = (STATUS_MAP.status.canReserve) ? 'enabled' : 'disabled'
-book3.checkout = (STATUS_MAP.status.canCheckout) ? 'enabled' : 'disabled'
-book3.checkin = (STATUS_MAP.status.canCheckIn) ? 'enabled' : 'disabled'
+const book3 = document.getElementById('book3');
+const book3Status = book3.querySelector('.status');
+const book3Reserve = book3.querySelector('.reserve');
+const book3Checkout = book3.querySelector('.checkout');
+const book3Checkin = book3.querySelector('.checkin');
+
+book1Status.style.color = STATUS_MAP.overdue.color;
+book1Reserve.disabled = STATUS_MAP.overdue.canReserve ? false : true;
+book1Checkout.disabled = STATUS_MAP.overdue.canCheckout ? false : true;;
+book1Checkin.disabled = STATUS_MAP.overdue.canCheckIn ? false : true;
+
+book2Status.style.color = STATUS_MAP.reserved.color;
+book2Reserve.disabled = STATUS_MAP.reserved.canReserve ? false : true;
+book2Checkout.disabled = STATUS_MAP.reserved.canCheckout ? false : true;
+book2Checkin.disabled = STATUS_MAP.reserved.canCheckIn ? false : true;
+
+book3Status.style.color = STATUS_MAP.shelf.color;
+book3Reserve.disabled = STATUS_MAP.shelf.canReserve ? false : true;
+book3Checkout.disabled = STATUS_MAP.shelf.canCheckout ? false : true;
+book3Checkin.disabled = STATUS_MAP.shelf.canCheckIn ? false : true;

@@ -118,6 +118,8 @@ checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
 ### Current preview of website
 ![image](live_server_preview.png)
 
+
 ### external resources to be used
-* [styles and classes] https://javascript.info/styles-and-classes
-* [HTMLElements.style] https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+* [styles and classes](https://javascript.info/styles-and-classes)
+* [HTMLElements.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
+
