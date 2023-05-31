@@ -1,3 +1,8 @@
+// @ts-check
+
+/**
+ * @type {Array<string>} MONTHS - has all the months used to evaluate the athletes 
+ */
 const MONTHS = [
     'Jan',
     'Feb',
@@ -13,12 +18,28 @@ const MONTHS = [
     'Dec',
   ]
   
+/**
+ * an object containing all the data of the atheletes competing in the races
+ * @typedef {object} data - the main object storing all the athelete information
+ * property {object} data -main object
+ * @property {object} response - a nested object containing child objects
+ * @property {string} requestType - when searching for athelete data
+ * @property {string} requestBy - when searching athletes with similar data
+ * @property {string} forDisplay - which races should be visible on the webpage
+ * @property {string} firstName - name of the athelete
+ * @property {string} surname - surname of the athlete
+ * @property {string} id - the given ID to each athlete
+ * @property {{date: string , time: Array<number>}} races - details of each race ran by the athletes   
+ */
+
+/**
+ * @type {data}
+ */
   const data = {
     response: {
       requestType: "FETCH_ATHLETE_DATA",
       requestBy: "ALL_MATCHING_ATHLETES",
       forDisplay: "BEST_RACES",
-  
       data: {
         NM372: {
           firstName: "Nwabisa",
@@ -123,6 +144,6 @@ const MONTHS = [
 
 
   function B ()  {
-    console.log(a);
-    console.log(a)
+    console.log(NM372);
+    console.log(SV782)
   }
