@@ -4,7 +4,7 @@
  * @type {Array<string>} MONTHS - has all the months used to evaluate the athletes 
  */
 const MONTHS = [
-    'Jan',
+    true,
     'Feb',
     'Mar',
     'Apr',
@@ -85,7 +85,13 @@ const MONTHS = [
   };
   
   // Only edit below this comment
-  
+  /**
+   * 
+   * @param {DocumentFragment} athlete - the class to be used in the HTML when displaying athlete data
+   * @returns 
+   */
+
+
   const createHtml = (athlete) => {
     const {firstName, surname, id, races} = data.response.data[athlete];
     const {date, time} = races[races.length - 1];
